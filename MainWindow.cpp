@@ -234,7 +234,7 @@ void MainWindow::reset(){
 void MainWindow::restart(){
     if(m_restartButton.getGlobalBounds().contains(sf::Mouse::getPosition(m_MainWindow).x, sf::Mouse::getPosition(m_MainWindow).y))
     {
-       m_winState = 1; // Reset the windows' state to 1(working state)
+       m_winState = 1; // Reset the windows' state to 1 (working state)
        
        m_finalCountdown = 10; // Reset countdown back to maximum value
        
