@@ -175,7 +175,7 @@ void MainWindow::update(float dt)
         /* SCORE RE-SETTINGS FOR ENDING WINDOW */
 
         player.m_hudScore.setCharacterSize(45);
-        player.m_hudScore.setPosition((WHEIGHT / 2) + 5, (WWIDTH / 2) - 200);        
+        player.m_hudScore.setPosition((WHEIGHT / 2) + 5, (WWIDTH / 2) - 200); // Making it fit in the center
     }
     
     /* UPDATE HOVER COLOR FOR BUTTON AND TEXT */
@@ -251,7 +251,12 @@ void MainWindow::quit()
 
 /* UPDATE HOVER COLOR FOR BUTTONS AND TEXT */
 
-void MainWindow::updateHoverColor(sf::RectangleShape &button, sf::Text &text, sf::Color &buttonNormalColor, sf::Color &buttonHoverColor, sf::Color &normalTextColor, sf::Color &hoverTextColor)
+void MainWindow::updateHoverColor(sf::RectangleShape &button, 
+                                  sf::Text           &text, 
+                                  sf::Color          &buttonNormalColor, 
+                                  sf::Color          &buttonHoverColor,
+                                  sf::Color          &normalTextColor, 
+                                  sf::Color          &hoverTextColor)
 {
     if(button.getGlobalBounds().contains(sf::Mouse::getPosition(m_MainWindow).x, sf::Mouse::getPosition(m_MainWindow).y))
     {

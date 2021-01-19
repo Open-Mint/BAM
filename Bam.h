@@ -13,10 +13,10 @@ public:
     int                 m_score;
 public:    
     Bam();
-    void cursorSpeed();
-    void resetSquare();
-    sf::Text   score();
-    sf::Text  coords();
+    void          cursorSpeed();
+    void          resetSquare();
+    sf::Text            score();
+    sf::Text           coords();
 private:
     std::random_device               m_rd;
     std::mt19937                    m_gen;
