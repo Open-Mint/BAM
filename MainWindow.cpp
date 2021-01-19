@@ -3,8 +3,8 @@
 
 MainWindow::MainWindow()
   : m_MainWindow( sf::VideoMode(WWIDTH, WHEIGHT), "Bam!!", sf::Style::Close | sf::Style::Titlebar),
-    Q_normalColor(202, 11, 0),      Q_hoverColor(162, 9, 0),
-    R_normalColor(175, 234, 220),   R_hoverColor(140, 188, 176),
+    Q_normalColor(202, 11, 0),        Q_hoverColor(162, 9, 0),
+    R_normalColor(175, 234, 220),     R_hoverColor(140, 188, 176),
     m_normalTextColor(4, 30, 66),     m_hoverTextColor(3, 24, 53)
 {
 
@@ -102,7 +102,7 @@ void MainWindow::handleEvents()
             Main window events here
             =---------------------=
         */
-        switch( evnt.type )
+        switch(evnt.type)
         {
             case sf::Event::Closed:
             {
@@ -141,14 +141,13 @@ void MainWindow::update(float dt)
     std::stringstream countdown;
     std::stringstream restartButtonText;
     std::stringstream quitButtonText;
-    std::stringstream areYouSureText;
     std::stringstream theEndText;
 
     if(m_finalCountdown >= 1.f){
         
         /* DANGER COLOR */
         
-        if(m_finalCountdown < 6.f && ((int)m_finalCountdown % 2) == 1)
+        if(m_finalCountdown < 6.f && (static_cast<int>(m_finalCountdown) % 2) == 1)
             m_timer.setFillColor(sf::Color(202, 11, 0));
         else
             m_timer.setFillColor(sf::Color::White);
@@ -181,10 +180,10 @@ void MainWindow::update(float dt)
     
     /* UPDATE HOVER COLOR FOR BUTTON AND TEXT */
 
-    updateHoverColor(m_restartButton, m_restartText, R_normalColor, R_hoverColor, m_normalTextColor, m_hoverTextColor); 
-    updateHoverColor(m_quitButton, m_quitText, Q_normalColor, Q_hoverColor, m_normalTextColor, m_hoverTextColor);    
+    updateHoverColor(m_restartButton , m_restartText , R_normalColor , R_hoverColor , m_normalTextColor , m_hoverTextColor); 
+    updateHoverColor(m_quitButton    , m_quitText    , Q_normalColor , Q_hoverColor , m_normalTextColor , m_hoverTextColor);    
 
-    countdown << (int)m_finalCountdown; 
+    countdown << static_cast<int>(m_finalCountdown); 
     restartButtonText << "Restart";
     quitButtonText << "Quit";
     theEndText << "Thanks for playing!";
