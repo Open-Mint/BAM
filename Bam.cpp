@@ -20,7 +20,7 @@ void Bam::resetSquare(){
     ++m_score;
 }
 
-void Bam::cursorSpeed(){
+void Bam::cursorSpeed(){\[]
     
 }
 
